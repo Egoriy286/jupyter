@@ -1,4 +1,4 @@
-FROM quay.io/fenicsproject/stable:current
+FROM quay.io/fenicsproject/stable:latest
 
 # Install any additional packages
 RUN apt-get update && \
@@ -58,3 +58,4 @@ EXPOSE 8888
 
 # Запуск Jupyter Lab от пользователя fenics с base_url
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--base-url=/fenics-legacy/"]
+
